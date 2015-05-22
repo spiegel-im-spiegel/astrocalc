@@ -20,7 +20,7 @@ func dnGregorian(t time.Time) int64 {
 		m -= 3
 	}
 	d := int64(t.Day()) - 1
-	return (1461*y)/4 + y/400 - y/100 + (153*m+2)/5 + d - 678881
+	return (1461*y)/4 + y/400 - y/100 + (153*m+2)/5 + d - 678882
 }
 
 func dnUnix(t time.Time) int64 {
