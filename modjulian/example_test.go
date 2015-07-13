@@ -2,7 +2,7 @@ package modjulian_test
 
 import (
 	"fmt"
-	"astrocalc/modjulian"
+	"github.com/spiegel-im-spiegel/astrocalc/modjulian"
 	"time"
 )
 
