@@ -16,6 +16,9 @@ var mjdnTests []mjdnTest //test cases for DayNumber
 func TestMain(m *testing.M) {
 	//initialization
 	mjdnTests = []mjdnTest{ //test cases for DayNumber
+		{time.Date(-4712, 1, 1, 0, 0, 0, 0, time.UTC), int64(-2400001)},
+		{time.Date(1582, 10, 4, 0, 0, 0, 0, time.UTC), int64(-100841)},
+		{time.Date(1582, 10, 15, 0, 0, 0, 0, time.UTC), int64(-100840)},
 		{time.Date(1969, 12, 31, 0, 0, 0, 0, time.UTC), int64(40586)},
 		{time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC), int64(40587)},
 		{time.Date(2015, 1, 1, 0, 0, 0, 0, time.UTC), int64(57023)},
