@@ -18,7 +18,7 @@ func TestMain(m *testing.M) {
 	mjdnTests = []mjdnTest{ //test cases for DayNumber
 		{time.Date(-4712, 1, 2, 0, 0, 0, 0, time.UTC), int64(-2400000)},
 		{time.Date(-1, 1, 1, 0, 0, 0, 0, time.UTC), int64(-679308)},
-		{time.Date(0, 11, 1, 0, 0, 0, 0, time.UTC), int64(-678638)},
+		{time.Date(0, 10, 31, 0, 0, 0, 0, time.UTC), int64(-678639)},
 		{time.Date(0, 12, 31, 0, 0, 0, 0, time.UTC), int64(-678578)},
 		{time.Date(1, 1, 1, 0, 0, 0, 0, time.UTC), int64(-678577)},
 		{time.Date(1582, 10, 4, 0, 0, 0, 0, time.UTC), int64(-100841)},
