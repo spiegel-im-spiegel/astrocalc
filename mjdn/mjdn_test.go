@@ -25,6 +25,7 @@ func TestMain(m *testing.M) {
 		{time.Date(1582, 10, 15, 0, 0, 0, 0, time.UTC), MJDN(-100840)},
 		{time.Date(1969, 12, 31, 0, 0, 0, 0, time.UTC), MJDN(40586)},
 		{time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC), MJDN(40587)},
+		{time.Date(1989, 1, 8, 0, 0, 0, 0, time.UTC), MJDN(47534)}, //平成元年
 		{time.Date(2015, 1, 1, 0, 0, 0, 0, time.UTC), MJDN(57023)},
 	}
 
