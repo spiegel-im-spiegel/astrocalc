@@ -4,8 +4,8 @@
  * http://creativecommons.org/publicdomain/zero/1.0/deed.ja
  */
 
-// Package modjulian は修正ユリウス日（Modified Julian Date）の計算を行います。
-package modjulian
+// Package mjd は修正ユリウス日（Modified Julian Day）の計算を行います。
+package mjd
 
 import "time"
 

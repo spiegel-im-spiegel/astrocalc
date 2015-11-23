@@ -1,4 +1,4 @@
-package modjulian
+package mjd
 
 import (
 	"os"
