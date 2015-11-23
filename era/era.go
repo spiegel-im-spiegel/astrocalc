@@ -11,12 +11,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/spiegel-im-spiegel/astrocalc/modjulian"
+	"github.com/spiegel-im-spiegel/astrocalc/mjdn"
 )
 
 // 年号のインスタンス
 var (
-	AnnoDomini = New("A.D.", "西暦", -678577, false) // 0001-01-01
+	AnnoDomini = New("A.D.", "西暦", -678577) // 0001-01-01
 )
 
 // Era は年号に関する情報を定義します。
@@ -31,19 +31,17 @@ type Era struct {
 	org *time.Time
 
 	// 年号の開始時点（修正ユリウス通日）
-	// 開始時点のチェックを行わない場合は checkBounds を false にセット
-	start       int64
-	checkBounds bool
+	start mjdn.MJDN
 }
 
 // New は Era インスタンスを作成します。
-func New(name string, wamei string, start int64, check bool) *Era {
-	return &Era{name: name, wamei: wamei, start: start, checkBounds: check, year: 1}
+func New(name string, wamei string, start mjdn.MJDN) *Era {
+	return &Era{name: name, wamei: wamei, start: start, year: 1}
 }
 
 // Copy は Era インスタンスのコピーを作成します。
 func Copy(era *Era) *Era {
-	return &Era{name: era.name, wamei: era.wamei, start: era.start, checkBounds: era.checkBounds, year: era.year, org: era.org}
+	return &Era{name: era.name, wamei: era.wamei, start: era.start, year: era.year, org: era.org}
 }
 
 // Check は指定した日付が年号の開始時点以降かどうかチェックします。
@@ -52,10 +50,7 @@ func Copy(era *Era) *Era {
 // 開始時点より前なら false
 // 開始時点のチェックが不要の場合は常に true
 func (era *Era) Check(t time.Time) bool {
-	if !era.checkBounds {
-		return true
-	}
-	return modjulian.DayNumber(t) >= era.start
+	return mjdn.DayNumber(t) >= era.start
 }
 
 // Import は指定した日付をインポートします。
@@ -64,11 +59,8 @@ func (era *Era) Check(t time.Time) bool {
 // 開始時点より前なら false
 // 開始時点が定義されていない場合は常に true
 func (era *Era) Import(t time.Time) bool {
-	if !era.Check(t) {
-		return false
-	}
 	era.org = &t
-	start := modjulian.ToTime(era.start, t.Location())
+	start := era.start.ToTime(t.Location())
 	era.year = int64(t.Year()) - int64(start.Year()) + 1
 	return true
 }
