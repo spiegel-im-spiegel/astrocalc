@@ -43,6 +43,9 @@ Usage: astrocalc mjdn <year> <month> <day>
 // Run は mjdn コマンドを実行する
 func (c Context) Run(args []string) int {
 	flags := flag.NewFlagSet(Name, flag.ContinueOnError)
+	flags.Usage = func() {
+		c.Error(c.Help())
+	}
 	// Parse commandline flag
 	if err := flags.Parse(args); err != nil {
 		return facade.ExitCodeError
