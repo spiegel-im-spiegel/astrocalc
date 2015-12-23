@@ -1,0 +1,3 @@
+package: github.com/spiegel-im-spiegel/astrocalc
+import:
+- package: github.com/spiegel-im-spiegel/facade

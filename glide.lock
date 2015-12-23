@@ -1,0 +1,12 @@
+hash: 17279aaece58ba64b0b873ba76451d13ab36334f80c7b4c6399336a6f286b4a4
+updated: 2015-12-23T11:59:44.7024081+09:00
+imports:
+- name: github.com/mitchellh/cli
+  version: 8102d0ed5ea2709ade1243798785888175f6e415
+- name: github.com/spiegel-im-spiegel/facade
+  version: 86d5e1355c09fd1cd6fa1ef057dc4c630cb9c34f
+- name: golang.org/x/crypto
+  version: f18420efc3b4f8e9f3d51f6bd2476e92c46260e9
+  subpackages:
+  - /ssh/terminal
+devImports: []
