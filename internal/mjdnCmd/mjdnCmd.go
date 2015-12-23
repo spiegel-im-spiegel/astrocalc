@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/spiegel-im-spiegel/astrocalc/mjdn"
-	"github.com/spiegel-im-spiegel/facade"
+	"github.com/spiegel-im-spiegel/gocli/facade"
 )
 
 // Name は mjdn コマンド名を定義する

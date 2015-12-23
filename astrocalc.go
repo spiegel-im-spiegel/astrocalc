@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/spiegel-im-spiegel/astrocalc/internal/mjdnCmd"
-	"github.com/spiegel-im-spiegel/facade"
+	"github.com/spiegel-im-spiegel/gocli/facade"
 )
 
 const (
