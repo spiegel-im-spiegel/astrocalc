@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/spiegel-im-spiegel/astrocalc/internal/mjdnCmd"
-	"github.com/spiegel-im-spiegel/gocli/facade"
+	"github.com/spiegel-im-spiegel/gofacade"
 )
 
 const (
@@ -15,14 +15,14 @@ const (
 	Version string = "0.1.0"
 )
 
-func setupFacade(cxt *facade.Context) *facade.Facade {
-	fcd := facade.NewFacade(cxt)
+func setupFacade(cxt *gofacade.Context) *gofacade.Facade {
+	fcd := gofacade.NewFacade(cxt)
 	fcd.AddCommand(mjdnCmd.Name, mjdnCmd.Command(cxt, Name))
 	return fcd
 }
 
 func main() {
-	cxt := facade.NewContext(os.Stdin, os.Stdout, os.Stderr)
+	cxt := gofacade.NewContext(os.Stdin, os.Stdout, os.Stderr)
 	fcd := setupFacade(cxt)
 	rtn, err := fcd.Run(Name, Version, os.Args[1:])
 	if err != nil {

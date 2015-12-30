@@ -1,12 +1,10 @@
-hash: fa2926490b0d53f974a5f9823c1e17f6637245a22e1a433858df08ca29a4160e
-updated: 2015-12-23T20:50:40.2096825+09:00
+hash: a506b6a03abf4d5eef05b96f5c63eadba62a9bf0398985659225de09b243c686
+updated: 2015-12-30T13:15:16.4611185+09:00
 imports:
 - name: github.com/mitchellh/cli
   version: 8102d0ed5ea2709ade1243798785888175f6e415
-- name: github.com/spiegel-im-spiegel/gocli
-  version: 32ad9e73f80f800fe702e309f1693af8bb111bf4
-  subpackages:
-  - facade
+- name: github.com/spiegel-im-spiegel/gofacade
+  version: ce33c32e1770765a4379e1c161f89e4836b7b79c
 - name: golang.org/x/crypto
   version: f18420efc3b4f8e9f3d51f6bd2476e92c46260e9
   subpackages:
