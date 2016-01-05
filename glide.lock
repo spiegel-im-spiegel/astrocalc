@@ -1,12 +1,18 @@
 hash: a506b6a03abf4d5eef05b96f5c63eadba62a9bf0398985659225de09b243c686
-updated: 2015-12-30T13:15:16.4611185+09:00
+updated: 2016-01-05T16:19:13.0355374+09:00
 imports:
+- name: github.com/bgentry/speakeasy
+  version: 36e9cfdd690967f4f690c6edcc9ffacd006014a0
+  repo: https://github.com/bgentry/speakeasy
+- name: github.com/mattn/go-isatty
+  version: 56b76bdf51f7708750eac80fa38b952bb9f32639
+  repo: https://github.com/mattn/go-isatty
 - name: github.com/mitchellh/cli
-  version: 8102d0ed5ea2709ade1243798785888175f6e415
+  version: 43a4bc367e0d53f561d3d985b9dca84e15bd0554
 - name: github.com/spiegel-im-spiegel/gofacade
   version: ce33c32e1770765a4379e1c161f89e4836b7b79c
 - name: golang.org/x/crypto
-  version: f18420efc3b4f8e9f3d51f6bd2476e92c46260e9
+  version: 552e9d568fde9701ea1944fb01c8aadaceaa7353
   subpackages:
   - ssh/terminal
 devImports: []
